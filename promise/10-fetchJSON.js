@@ -5,5 +5,8 @@ var path = 'http://localhost:1337';
 HTTP.read(path)
 .then(function(data) {
   console.log(JSON.parse(data));
-});
+})
+.then(null, console.error)
+.done();
+
   
