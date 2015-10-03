@@ -1,8 +1,8 @@
-http = require('http');
-async = require('async');
+var http = require('http');
+var async = require('async');
 
-url1 = process.argv[2];
-url2 = process.argv[3];
+var url1 = process.argv[2];
+var url2 = process.argv[3];
 
 async.series({
   requestOne: function(done) {
