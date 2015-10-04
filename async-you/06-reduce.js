@@ -14,9 +14,7 @@ async.reduce(number, 0, function(memo, item, callback) {
     res.on('end', function() {
       callback(null, memo + Number(body)); // add parseInt?
     });
-  }).on('error', function(err) {
-    return console.log(err);
-  });
+  }).on('error', callback);
 }, function(err, result) {
   if (err) return console.log(err);
   console.log(result);
